@@ -1,0 +1,93 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+.jumbotron{
+
+	background-image: url("https://urbanturbankanata.ca/wp-content/uploads/2013/12/banner-2.jpg");
+	
+	opacity: 0.9;
+	margin-top: 30px;
+	text-decoration: none;
+	
+
+
+}
+.bnr{
+	color: yellow;
+}
+.link1{
+	text-align: center;
+	
+}
+.link2{
+	text-align: center;
+	background-color: green;
+}
+.div1{
+	padding-top: 40px;
+}
+.div3{
+max-width: 600px;	
+background-color: rgb(69, 127, 255);
+text-align: center;
+margin-top: 100px;
+padding: 80px;
+}
+.div2{
+	background-color: blue;
+	text-align: center;
+}
+.div4{
+	border:dashed black 1px; 
+	padding-left: 30px;
+	padding-bottom:30px; 
+
+}
+.div5{
+max-width: 600px;	
+background-color: rgb(69, 127, 255);
+text-align: center;
+margin-top: 20px;
+padding: 30px;
+}
+
+.thumbnail img{
+	max-width: 200px;
+	max-height: 200px;
+}
+.div6{
+	margin-top: 40px;
+}
+.div7{
+	margin-top: 20px;
+}
+.bn{
+	text-align: center;
+}
+ footer {
+      background-color: black;
+      color: white;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      text-align: center;
+    }
+ .link3{
+ 	margin: 40px;
+ 	background-color: green;
+ }   
+ .link4{
+ 	margin: 30px;
+
+ }
+ .div8{
+ 	margin-top: 40px;
+ 	text-align: center;
+ }
+ .div9{
+ 	border: solid black 2px;
+ }

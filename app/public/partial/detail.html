@@ -1,0 +1,143 @@
+<div class="container div1">
+	<div class="row"  >
+	<div >
+	  <div class="col-md-6" >
+	  	 <img class="img-responsive" src="{{pro.imgurl}}" alt="Chania" width="460" height="345"> 
+	  	 <a href="" class="btn btn-primary link3 " role="button" ng-click="addreview(pro._id)">Add Review</a>
+	  
+	  </div>
+	  <div class="col-md-6 div4">
+	  	<h1>{{pro.restaurantname}} </h1>
+	  	
+	  	<h2><i class="fa fa-inr" aria-hidden="true"></i> {{pro.price}} <small>(per head)</small></h2>
+	  	<h3>Description:-</h3>
+	  	<small>{{pro.description}}</small>
+	    <h3>Address</h3>
+	  	<small>{{pro.address}}</small><br><br>
+	  	<a href="" class="btn btn-info link2 " role="button" ng-click="bookreserve(pro._id)">Book Reserve</a>
+	  </div>
+		
+	</div>
+	</div>
+
+</div>
+<div class="container div6" ng-show="in">
+
+<form >
+<div class="row  ">
+	
+	
+	<div class="col-md-4">
+	<label>Date</label>
+		<select class="form-control"  ng-model="b.date">
+        <option>2/6/2017</option>
+        <option>3/6/2017</option>
+        <option>4/6/2017</option>
+        <option>5/6/2017</option>
+        <option>7/6/2017</option>
+        <option>8/6/2017</option>
+        <option>9/6/2017</option>
+      </select>
+	</div>
+	<div class="col-md-4">
+	<label>time</label>
+		<select class="form-control"  ng-model="b.time">
+        <option>11am-12pm</option>
+        <option>12pm-1pm</option>
+        <option>1pm-2pm</option>
+        <option>2pm-3pm</option>
+        <option>3pm-4pm</option>
+        <option>4pm-5pm</option>
+        <option>5pm-6pm</option>
+
+      </select>
+	</div>
+	<div class="col-md-4">
+	<label>Table no</label>
+		<select class="form-control"  ng-model="b.tableno">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+
+      </select>
+	</div>
+	 </div>
+	 <div class="row div7">
+	 	<div class="col-md-4">
+	 		
+      <label for="name">Name</label>
+      <input type="text" ng-model = "b.name" class="form-control"  placeholder="Enter Name">
+    
+	 	</div>
+	   
+	    <div class="col-md-4">
+	    	
+      <label for="email">Email</label>
+      <input type="email" class="form-control"  placeholder="Enter email" ng-model = "b.email">
+    
+	    </div>
+	   
+	    <div class="col-md-4">
+	    	
+      <label for="number">Contact Number</label>
+      <input type="number" class="form-control"  placeholder="Enter Contact Number" ng-model = "b.contact">
+   
+	    </div>
+	    
+	  </div>
+	<div class=" row bn">
+		<label></label><br>
+		<button type="submit" class="btn btn-primary " ng-click="book(pro._id)">Book</button>
+		<button type="submit" class="btn btn-danger " ng-click="update(pro._id)">Update</button>
+	</div>
+
+</form>
+ 
+  </div>
+  <div class="container" ng-show="in">       
+  <table class="table">
+    <thead>
+      <tr>
+        <th>name</th>
+        <th>email</th>
+        <th>contact</th>
+        <th>date</th>
+        <th>time</th>
+        <th>tableno</th>
+        <th>Action</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="x in bd">
+        <td>{{x.name}}</td>
+        <td>{{x.email}}</td>
+        <td>{{x.contact}}</td>
+        <td>{{x.date}}</td>
+        <td>{{x.time}}</td>
+        <td>{{x.tableno}}</td>
+          
+         <td><button type="button" class="btn btn-danger " ng-click="edit(x._id)">Edit</button></td>
+        <td><button type="button" class="btn btn-danger " ng-click="bookdelete(x._id,pro._id)" >Delete</button></td>
+      </tr>
+     
+    </tbody>
+  </table>
+</div>
+<div class="container div8" ng-show="rvw">
+
+	<div class="col-md-6">
+	    	
+      <label for="text">Add reviews</label>
+      <input type="text" class="form-control"  placeholder="Enter text" ng-model = "r.review">
+     
+       <button type="button" class="btn btn-danger link4" ng-click="addrvw(pro._id)" >Add</button>
+	    </div>
+	    <div class="col-md-6 ">
+            <p  ng-repeat="x in rws">{{currentUser}} -->{{x.review}}</p>
+	    </div>
+</div>
